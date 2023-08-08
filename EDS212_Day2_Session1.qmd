@@ -1,0 +1,46 @@
+---
+title: "EDS212_Day2_Session1"
+---
+
+## Derivatives in R
+
+```{r}
+# Creating and storing the function 
+fx <- expression(3.1 * (x ^ 4 )- 28 * x)
+# Creating and storing the derivitive of our function
+df_dx <- D(fx, 'x')
+# Show the dervitive calculated
+df_dx
+
+x <- 10
+
+eval(df_dx)
+```
+
+```{r}
+#store my initial function expression
+gz <- expression(2 * z ^ 3 - 10.5 * z ^ 2)
+#store the derivitive equation 
+dg_dz <- D(gz, 'z')
+#show the derivitive calculated          
+dg_dz
+#store the slope you want to plug-in
+z <- 3.6
+#evaluate the slope for 3.6
+eval(dg_dz)
+
+```
+
+```{r}
+#store my initial function expression
+gz <- expression(2 * z ^ 3 - 10.5 * z ^ 2)
+#store the derivitive equation 
+dg_dz <- D(gz, 'z')
+#show the derivitive calculated          
+dg_dz
+#store the slope you want to plug-in, in this case multiple as we made a sequence
+z <- seq(from = 1, to = 3, length = 20)
+#evaluate the slope for the sequence
+eval(dg_dz)
+
+```
